@@ -1,13 +1,4 @@
-// const obj = {
-//     name : 'Himel',
-//     role : 'support'
-// }
-
-// const obj1 = new Object()
-
-// console.log(obj1);
-
-// map 
+// ++++++++++++++++++ map +++++++++++++++++++++++ 
 
 const infos = [
     {
@@ -48,15 +39,13 @@ const infos = [
 
 // infos.map((info)=>{
 //     Object.entries(info).map(([key, value])=>{
-//         // console.log(typeof(value), value);
+        
 //         if(Array.isArray(value)){
-//             // if array type
-//             // console.log(value, 'arr');
+
 //             value.map((hobbie) => console.log(hobbie))
 //             console.log(`/`);
 
 //         }else if(typeof(value) === 'object'){
-
 //             // console.log(value , 'obj');
 //             Object.entries(value).map(([key, value]) => console.log(`The key ${key} and the value ${value}`))
 //             console.log(`/`);
@@ -68,7 +57,7 @@ const infos = [
 //     })
 // })
 
-// filter
+// ++++++++++++++ filter ++++++++++++++++++++
 
 const customers = [
     {
@@ -93,17 +82,28 @@ const customers = [
     }
 ]
 
+// this one works as expected
+const ltdUsersFinal = customers.filter((customer) => customer.pos === 'LTD')
+
+
+// these are written => case one 
 const ltdUsers = customers.map((customer) => {
     const hi = Object.keys(customer).filter((ltd) => ltd === 'LTD')
-    return hi
+    return hi;
 })
 
-const ltdUsersFinal = customers.filter((customer) => customer.pos === 'LTD')
 const ltdUsersFinal2 = customers.map((cus) => {
-    return cus.pos === 'LTD'
+    let newArr = []
+    if(cus.pos === "LTD"){
+        newArr.push(cus);
+        // console.log(cus, 'LTD');
+        // return cus;
+    }
+    return newArr;
 })
 
 console.log(ltdUsersFinal2);
+// console.log(ltdUsersFinal2);
 
 // const ltdCustomers = customers.map((customer) => {
 //     r

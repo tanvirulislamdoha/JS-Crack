@@ -25,7 +25,10 @@ for (let ar in arr){
 }
 
 for (let st in str){
+<<<<<<< HEAD
     // console.log(st);
+=======
+>>>>>>> upstream/main
     // console.log(str[st])
 }
 

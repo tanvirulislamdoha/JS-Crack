@@ -5,7 +5,9 @@
 
 
 
-        const support = ['shatil', 'mahi', 'himel', 'tanvir']
+        // const support = ['shatil', 'mahi', 'himel', 'tanvir']
+
+
 
         // let y = support.push('bayezid', 'proma')
         // console.log(y)  // answer = 6
@@ -27,8 +29,8 @@
         // console.log(support)    // answer = [ 'mahi', 'himel', 'tanvir' ]
 
 // shift() array er first value ta remove kore and remove kora value ta return kore
-
-
+        
+const support = ['shatil', 'mahi', 'himel', 'tanvir']
 
         // let vr2 = support.unshift("bayezid")
         // console.log(vr2)     // answer =  5 
@@ -37,6 +39,13 @@
 // unshift() array er first e new value assign kore and new array er total length return kore
 
 
-        const office = ['dorik', 'bayju', 'authlab', 'pran']
+        // const office = ['dorik', 'bayju', 'authlab', 'pran']
 
-        office.from()
+        // office.from()
+
+
+        // const st1 = "hello world"
+        //              012345678910
+        // const ar1 = [1,2, 3,4,5]
+        //              0,1, 2,3,4
+

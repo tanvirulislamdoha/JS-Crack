@@ -5,29 +5,38 @@
 
 
 
-const arr = [1, 2, 3, 4, 5, 6, 'tanvir', 'islam', 'doha']
+// const arr = [1, 2, 3, 4, 5, 6, 'tanvir', 'islam', 'doha']
 
-const obj = {
-    id : 4321,
-    name: 'tanvir islam',
-    email: 'tanvir@io.com',
-    address: 'sylhet'
-}
+// const obj = {
+//     id : 4321,
+//     name: 'tanvir islam',
+//     email: 'tanvir@io.com',
+//     address: 'sylhet'
+// }
 
-const str = "hello world"
+// const str = "hello world"
 
 //! for of loop normal loop er mto value return kore jegular index thake na like array, set , string
 
 // for of loop
+const arr = [1, 2, 3, 4, 5, 6, 'tanvir', 'islam', 'doha']
+            
+// for (let ar of arr){ 
+//     // console.log(ar)         
+//     // console.log(arr.indexOf(ar))         
+// }
+// for(int i=0; i<length; i++)
 
-for (let ar of arr){ 
-    // console.log(ar)         
-    // console.log(arr.indexOf(ar))         
-}
+// for(let x of arr){
+//     console.log(x)
+// }
 
-for (let st of str ){
-    // console.log(st)
-}
+
+// const str = "hello world"
+
+// for(let mahi of str){
+//     console.log(mahi)
+// }
 
 
 // for (let {key,value} of obj){
@@ -36,12 +45,22 @@ for (let st of str ){
 
 //! for of loop object e direct chalanu jay na...aitar jonno kichu rules follow korea lage.aita ke age array te convert kore dewa lage..given below
 
+const obj = {
+    id : 4321,
+    name: 'tanvir islam',
+    email: 'tanvir@io.com',
+    address: 'sylhet'
+}
 
-for (let ob of Object.keys(obj)){
+for (let v1 of obj){
     // console.log(ob);    // generally Object.Keys() returns object key
     // console.log(obj[ob]); 
-    // console.log(obj.ob); 
+    console.log(v1)
 }
+
+
+// Object.entries(obj)
+
 
 
 for (let x of Object.values(obj)){
@@ -51,7 +70,7 @@ for (let x of Object.values(obj)){
 
 for (let [key, value] of Object.entries(obj)){
 
-    // console.log(`Key is: ${key} and value is: ${value} `)
+    console.log(`Key is: ${key} and value is: ${value} `)
 
     // Object.entries() each object key value ke ekta kore array te return kore
     // that's why i destructed the each arrar and print key and value

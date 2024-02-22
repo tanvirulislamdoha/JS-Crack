@@ -8,6 +8,16 @@ const obj = {
     // }
 }
 
+let car = {
+    color: "red",
+    model: "1998",
+    engine: "good"
+}
+
+// car.color
+// car[color]
+// car["color"]
+
 // console.log(obj["age"])
 
 // obj.salary()

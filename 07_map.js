@@ -31,7 +31,7 @@ const str = "hello world"
 // }
 
 
-const infos = [
+const infor = [
     {
         team: "support",
         role: "pain",
@@ -44,8 +44,62 @@ const infos = [
     }
 ]
 
-infos.map((info) => {
-    Object.entries(info).map(([key, value]) => {
-        console.log(`key is ${key} => value is  ${value}`)
+// infos.map((info) => {
+//     Object.entries(info).map(([key, value]) => {
+//         console.log(`key is ${key} => value is  ${value}`)
+//     })
+// })
+
+const infos = [
+    {
+      id: 1,
+      name: 'John',
+      age: 30,
+      hobbies: ['Reading', 'Hiking'],
+      address: {
+        street: '123 Main St',
+        city: 'Cityville',
+        country: 'Countryland'
+      }
+    },
+    {
+      id: 2,
+      name: 'Jane',
+      age: 25,
+      hobbies: ['Painting', 'Traveling'],
+      address: {
+        street: '456 Elm St',
+        city: 'Townsville',
+        country: 'Countryland'
+      }
+    },
+    {
+      id: 3,
+      name: 'Alice',
+      age: 35,
+      hobbies: ['Cooking', 'Photography'],
+      address: {
+        street: '789 Oak St',
+        city: 'Villageton',
+        country: 'Countryland'
+      }
+    }
+  ];
+
+//   console.log(complexArray)
+
+  infos.map((info) => {
+    Object.values(info).map((value) => {
+        if(Array.isArray(value)){
+            console.log(value)
+        }
+        else if(typeof(value)==='object'){
+            console.log(value)
+        }
+        else{
+            console.log(value)
+        }
     })
-})
+    console.log('\n')
+
+  })

@@ -59,7 +59,7 @@ const fruits = {
 
 let key = "color";
 
-const car = {
+const car1 = {
     name : "volov",
     year: 1990,
     owners: ["naeem", "raiyan", "shuvo"]

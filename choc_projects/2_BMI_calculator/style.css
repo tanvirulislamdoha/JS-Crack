@@ -1,0 +1,126 @@
+body{
+    background: #212121;
+    color: #939090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    background: #939090;
+    color: #212121;
+    padding: 1.5rem 1rem;
+    gap: 10px;
+    border-radius: 10px;
+    /* height: 40vh; */
+    width: 40vw;
+    padding: 2rem;
+}
+
+label{
+    font-size: 1.6rem;
+}
+
+.txt-label2{
+    margin-top: 20px;
+}
+
+label span{
+    font-size: 1.2rem;
+}
+
+input{
+    border: none;
+    outline: none;
+    padding: 1rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #c1bebe;
+    margin-top: 8px;
+}
+
+.btn-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    padding: 1.1rem 2rem;
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    background-color: #c8c3c3;
+    cursor: pointer;
+}
+
+/* msg */
+/* msg */
+/* msg */
+
+/* .msg-div{
+    display: none;
+} */
+
+.msg{
+    font-size: 1.2rem;
+    text-align: center;
+    display: none;
+}
+
+.under_weight{
+    background-color: #f6da24;
+    display: block;
+    color: #120a0a;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.healthy{
+    background-color: #02fa30;
+    display: block;
+    color: #120a0a;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.over_weight{
+    background-color: #f3a928;
+    display: block;
+    color: #120a0a;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.obese{
+    background-color: #ed0909;
+    display: block;
+    color: #120a0a;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.chart{
+    font-size: 1.2rem;
+    text-align: center;
+    /* border: 1px solid #ede4e4; */
+    /* display: inline-block; */
+    margin: auto;
+    padding: 15px 65px;
+    background: #7c7878;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: #1f1a1a;
+    margin-top: 25px;
+}

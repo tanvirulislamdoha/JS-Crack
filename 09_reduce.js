@@ -7,7 +7,7 @@
 
 const digits = [4, 32, 3, 5, 1, 54]
 
-//  there are two concepts in reduce() methods which are ACCUMULATOR and CURRENTVALU
+//  there are two concepts in reduce() methods which are ACCUMULATOR and CURRENTVALUE
 // accumulator means jomoKari. aita ager iteration hishab ta joma kore rakhe and proti iteration e value cng hy
 //  currentValue mane present je valuer upore iteration ta choltese oita
 
@@ -33,8 +33,8 @@ const userCart = [
 ]
 
 const t_price = userCart.reduce((totalPrice, currentPrice)=>{
-        // console.log(`accumulator is ${totalPrice} ==== currentValue is ${currentPrice}`)
-        return totalPrice + currentPrice.price
+        console.log(`accumulator is ${totalPrice} ==== currentValue is ${currentPrice}`)
+        // return totalPrice + currentPrice.price
 }, 0)
 
 // console.log(t_price)

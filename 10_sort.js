@@ -13,8 +13,8 @@ const numbers = [45, 236, 52, 7, 19,143];
 // why this kind of result????? because javascript sort anything by assume it as string and its asqii value
 
 const sorter = numbers.sort((small, large)=>{
-    // return small - large
-    return large - small
+    return small - large
+    // return large - small
     
 })
 

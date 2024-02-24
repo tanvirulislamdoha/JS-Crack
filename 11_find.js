@@ -15,5 +15,5 @@
             { id: 3, name: 'Bob' }
           ];
 
-    // const finder = users.find((user) => user.name == 'Alice')
+    const finder = users.find((user) => user.name == 'Alice')
     // console.log(finder)

@@ -10,7 +10,7 @@
 
 
 const rolls = new Set([1, 2, 3, 4])
-// console.log(rolls.add(3))        // it will change anything cause duplicate value ney na
+// console.log(rolls.add(3))        // it will change nothing cause duplicate value ney na
 // console.log(rolls.add("3"))      // it will be added as string
 // console.log(typeof rolls)           // answer: object
 // console.log(rolls)           // answer: Set(4) { 1, 2, 3, 4 }
@@ -27,7 +27,14 @@ cars.add(['item3', 'item2']);
 // console.log(cars)
 
 
-const random = [1,2,2,3,4,5,5,6];
-const uniqueElements = new Set(random);
+const random = [8, 10,1,2,2,3,4,5,5,6];
+// const uniqueElements = new Set(random);
 // console.log(uniqueElements);
 // console.log(random);
+
+// const even_finder = [...new Set(random)].filter((fil) => fil%2 == 0).sort((a, b) => a - b)
+// console.log(even_finder)
+
+console.log([...new Set(random)])
+
+// const gt = new

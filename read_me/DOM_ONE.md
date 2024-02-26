@@ -1,9 +1,13 @@
 
 #### Project Number - One [Toggle Project - Navigation & Sidebar]
 
-A site will have two buttons in the middle of the home page, which will be linked to two pages.
+A site will have two cards in the middle of the home page, which will be linked to two pages.
 
-The first Button name will be **"Navigation"**. Which must have to include ___
+For a visual referrence, you may have a look into this home page layout:
+
+![Alt text](../photo_resources/toggle_final.png)
+
+The first card name will be **"Navigation"**. Which must have to include ___
 
 1. Navigation that will have dropdown items using JS.
 2. It will be sticky navigation [ kindly expand the body using dummy data so that you can check whether sticky navigation works perfectly ]
@@ -14,7 +18,7 @@ For a visual referrence, you may have a look into this layout:
 
 ![Alt text](../photo_resources/Untitled-2024-02-26-1947.png)
 
-The second Button name will be **"Sidebar"**. Which must have to include ___
+The second card name will be **"Sidebar"**. Which must have to include ___
 
 1. The sidebar will contain Nested sidebar items.
 2. A toggle menu for collapsing and expanding the sidebar. [ you can follow the VS Code sidebar as a reference ]

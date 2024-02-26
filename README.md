@@ -1,8 +1,8 @@
 # JS-Crack
 
-# DOM Projects
+### DOM Projects
 
-**Project No - One**
+#### Project No - One
 
 A site will have two buttons in the middle of the home page, which will be linked to two pages.
 

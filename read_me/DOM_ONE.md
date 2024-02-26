@@ -12,7 +12,7 @@ The first Button name will be **"Navigation"**. Which must have to include ___
 
 For a visual referrence, you may have a look into this layout:
 
-![Alt text](./photo_resources/Untitled-2024-02-26-1947.png)
+![Alt text](../photo_resources/Untitled-2024-02-26-1947.png)
 
 The second Button name will be **"Sidebar"**. Which must have to include ___
 
@@ -22,7 +22,7 @@ The second Button name will be **"Sidebar"**. Which must have to include ___
 
 For a visual referrence, you may have a look into this layout:
 
-![Alt text](./photo_resources/sidebar_final.png)
+![Alt text](../photo_resources/sidebar_final.png)
 
 **Note: Search for design and layout. Plan this project by yourself. Try to write CSS by searching properties. Imagine and write JavaScript logic for desired functionalities by yourself, even if it's initially incorrect, and use console logs to find your mistakes and re-write the correct logic.**
 

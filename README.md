@@ -1,7 +1,9 @@
 # JS-Crack
 
-### Practical DOM Projects
+## Practical DOM Projects
 
-#### Project Number - One [Toggle Project - Navigation & Sidebar] 
+### Project Number - One 
 
-- [1](/read_me/DOM_ONE.md)
+#### Toggle Project - Navigation & Sidebar
+
+- [Explore the project descriptions](/read_me/DOM_ONE.md)

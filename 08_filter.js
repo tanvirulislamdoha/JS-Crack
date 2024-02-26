@@ -17,10 +17,10 @@ const rolls = [4, 32, 3, 5, 1, 54]
 const fill_one = rolls.filter((value, index, array) => {
     // console.log(`value is ${value} === Index is ${index} === ${array}`)
     
-    return index%2 === 0
+    return value % 2 === 0
 })
 
-// console.log(fill_one)     // answer: [ 4, 3, 1 ]
+console.log(fill_one)     // answer: [ 4, 3, 1 ]
 
 
 //! let's use THIS 

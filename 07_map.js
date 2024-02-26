@@ -16,6 +16,9 @@ const obj = {
 
 const str = "hello world"
 
+// const newArr = arr.map((ar, index, newAr)=> index + newAr);
+// console.log(newArr);
+
 // +++++++++ map [Only On Array]++++++++++++
 
 // first -> amra shudu Array er upor map method use korte parbo
@@ -24,7 +27,7 @@ const str = "hello world"
 
 
 
-// arr.map((value, index) => console.log("value: ",value, "index: ", index)) // => 
+// arr.map((value, index) => console.log("value: ", value, "index: ", index)) // => 
 
 // value:  1 index:  0
 // value:  2 index:  1
@@ -68,11 +71,11 @@ const infor = [
   }
 ]
 
-infor.map((info) => {
-  Object.entries(info).map(([key, value]) => {
-    // console.log(`key is ${key} => value is  ${value}`)
-  })
-})
+// infor.map((info) => {
+//   Object.entries(info).map(([key, value]) => {
+//     console.log(`key is ${key} => value is  ${value}`)
+//   })
+// })
 
 //Use case One -> Amra shudu map method customized ba expected value ta shudu return hisabe a ekta array na cheye oita just console log ba
 //DOM a populate korar jnno o use kori, jemon uporer function a amra returned array ta na niyew amra console log kore data show kortesi
@@ -113,6 +116,52 @@ const infos = [
   }
 ];
 
+function isObject(check_obj) {
+  return typeof check_obj === "object" && check_obj !== null && !Array.isArray(check_obj);
+}
+
+infos.map((info)=>{
+  // console.log(info);
+  Object.values(info).map((value)=>{
+    // console.log(value);
+    if(Array.isArray(value)){
+      // console.log(value);
+    }else if(isObject(value)){
+      // console.log(value);
+    }else{
+      console.log(value);
+    }
+  })
+})
+
+
+
+
+
+// infos.map((values) => {
+//   // console.log(values);
+//   Object.entries(values).map(([key, value]) => {
+//       console.log(`Key: ${key}. Value: ${value}`)
+//     if(Array.isArray(value)){
+//       // console.log(item);
+//       // for (const key in item) {
+//       //   // console.log(`${item[key]}`);
+//       //   // console.log(item[key]);
+//       // }
+//     } else if (isObject(value)) {
+//       // console.log(`Object is: ${item}`);
+//     }else{
+//       // console.log('single Item', item);c.
+//     }
+//   });
+// });
+
+
+
+
+
+
+
 // infos.map((info) => {
 //   // first er map method diye amra first layer of object a duklam
 //   Object.values(info).map((value) => {
@@ -146,39 +195,31 @@ const infos = [
 
 // So the second steps will be:
 
-infos.map((info) => {
-  // first er map method diye amra first layer of object a duklam
-  Object.values(info).map((value) => {
-    // ekhon oi each object k tader value diye ekta new array toiri korlam and oi values gular upor map run koralm
-      if(Array.isArray(value)){
-        // ekhane amra oi each obejct er value gular moddhe kunota array type ki nh check kortesi
-          // console.log(value, 'Array')
-          // amra ekhn ei array te loop kore data console.log korbo
-          value.map((val) => console.log(val))
-      }
-      else if(typeof(value)==='object'){
-        // ekhane amra oi each obejct er value gular moddhe kunota object type ki nh check kortesi
-          // console.log(value, 'Object')
-        // amra ekhn ei object ta ke array te convert kore ete loop kore data console.log korbo
-        Object.values(value).map((val) => console.log(val))
-      }
-      else{
-          console.log(value, 'normal value')
-      }
-  })
-  console.log('\n')
-})
+// infos.map((info) => {
+//   // first er map method diye amra first layer of object a duklam
+//   Object.values(info).map((value) => {
+//     // ekhon oi each object k tader value diye ekta new array toiri korlam and oi values gular upor map run koralm
+//       if(Array.isArray(value)){
+//         // ekhane amra oi each obejct er value gular moddhe kunota array type ki nh check kortesi
+//           // console.log(value, 'Array')
+//           // amra ekhn ei array te loop kore data console.log korbo
+//           value.map((val) => console.log(val))
+//       }
+//       else if(typeof(value)==='object'){
+//         // ekhane amra oi each obejct er value gular moddhe kunota object type ki nh check kortesi
+//           // console.log(value, 'Object')
+//         // amra ekhn ei object ta ke array te convert kore ete loop kore data console.log korbo
+//         Object.values(value).map((val) => console.log(val))
+//       }
+//       else{
+//           console.log(value, 'normal value')
+//       }
+//   })
+//   console.log('\n')
+// })
 
 // printed output:
 
-// 1 normal value
-// John normal value
-// 30 normal value
-// Reading
-// Hiking
-// 123 Main St
-// Cityville
-// Countryland
 
 
 // 2 normal value

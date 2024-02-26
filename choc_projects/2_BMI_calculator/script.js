@@ -43,7 +43,7 @@ btn_select.addEventListener('click', (e) => {
         }
         else{
             message.classList.add("obese")
-            message.textContent = `Your BMI is ${result}. Ai halar hala oto khas kne. rakkosh kubarir. Sharadin upre thakos ni?🖕 🖕 🖕 `
+            message.textContent = `Your BMI is ${result}. Ai halar hala oto khas kne. rakkosh kubarir. Sharadin khanir upre thakos ni?🖕 🖕 🖕 `
         }
     }
     // console.log(bmi_calculator(5.7, 57))

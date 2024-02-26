@@ -15,7 +15,7 @@ A site will have two buttons in the middle of the home page, which will be linke
 
     For a visual referrence, you may have a look into this layout:
 
-    ![Alt text](photo_resources/Untitled-2024-02-26-1947.png)
+    ![Alt text](./photo_resources/Untitled-2024-02-26-1947.png)
 
     - The second Button name will be **"Sidebar"**. Which must have to include ___
 
@@ -25,7 +25,7 @@ A site will have two buttons in the middle of the home page, which will be linke
 
     For a visual referrence, you may have a look into this layout:
 
-    ![Alt text](photo_resources/Untitled-2024-02-26-1947.png)
+    ![Alt text](./photo_resources/sd.png)
 
 **Note: Search for design and layout. Plan this project by yourself. Try to write CSS by searching properties. Imagine and write JavaScript logic for desired functionalities by yourself, even if it's initially incorrect, and use console logs to find your mistakes and re-write the correct logic.**
 

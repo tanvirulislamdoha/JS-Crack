@@ -4,7 +4,7 @@
 
 **Project No - One**
 
-A site will have two buttons in the middle of the home page, which will be linked to two pages.
+ A site will have two buttons in the middle of the home page, which will be linked to two pages.
 
     The first Button name will be **"Navigation"**. Which must have to include ___
 
@@ -29,7 +29,7 @@ A site will have two buttons in the middle of the home page, which will be linke
 
 **Note: Search for design and layout. Plan this project by yourself. Try to write CSS by searching properties. Imagine and write JavaScript logic for desired functionalities by yourself, even if it's initially incorrect, and use console logs to find your mistakes and re-write the correct logic.**
 
-After Completion of this small project :
+ After Completion of this small project :
 
     - You can build any navigation and sidebar for any project.
     - It will help you to understand and write code for any toggle functionality. [Ex - if you want to toggle className in any project based on DOM events, you can use this concept]

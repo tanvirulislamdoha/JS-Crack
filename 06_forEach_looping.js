@@ -17,6 +17,9 @@ const str = "hello world"
 
 //! forEach() shudu matro array te use kora jay
 
+const newAr = arr.forEach((ar)=> console.log(ar))
+// console.log(newAr);
+
 // str.forEach((st) => console.log(st));
 
         // arr.forEach((ar) => console.log(ar))

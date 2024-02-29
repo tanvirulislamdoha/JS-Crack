@@ -1,0 +1,334 @@
+<!-- Header code from order now page -->
+<!-- Header code from order now page -->
+<!-- Header code from order now page -->
+<!-- Header code from order now page -->
+<!-- Header code from order now page -->
+
+
+
+<!-- BEGIN PRICING TABLE TABS -->
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        var switches = $('button[data-switch-pricing]');
+        var plans    = $('[data-pricing-plan]');
+        
+        $(document).on('click', 'button[data-switch-pricing]', function (e) {
+            var selected = $(this).data('switch-pricing');
+            
+            $(plans).hide();
+            $('[data-pricing-plan=' + selected + ']').show();
+            
+            $(switches).removeClass('plan-active');
+            $(this).addClass('plan-active');
+        });
+        
+        $(switches).eq(2).click();
+    });
+</script>
+
+<style>
+    .woocommerce-Price-currencySymbol{
+        vertical-align: super;
+        font-size: 75%;
+    }
+    button.plan-active {
+        color: var(--color-5);
+        background-color: var(--color-3);
+    }
+    
+    [data-pricing-plan="3m"],
+    [data-pricing-plan="6m"],
+    [data-pricing-plan="12m"] {
+        display: none;
+    }
+</style>
+<!-- END PRICING TABLE TABS -->
+
+
+
+
+<!-- Footer code from order now page -->
+<!-- Footer code from order now page -->
+<!-- Footer code from order now page -->
+<!-- Footer code from order now page -->
+<!-- Footer code from order now page -->
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+    var control = $('.mu-pricing-switch');
+    var labels  = $(control).find('a');
+    var monthly = $(labels).eq(0);
+    var upfront = $(labels).eq(1);
+    
+    $(control).on('click', 'a', function (e) {
+        e.preventDefault();
+        
+        var isMonthly = $(control).hasClass('is-monthly');
+        
+        if ($(this).is(monthly) && ! isMonthly) {
+            $(control).addClass('is-monthly');
+        } else if ($(this).is(upfront) && isMonthly) {
+            $(control).removeClass('is-monthly');
+        }
+        
+        $(control).trigger('mu-pricing-change');
+    });
+    
+    $(control).on('click', 'span', function () {
+        $(control).toggleClass('is-monthly');
+        $(control).trigger('mu-pricing-change');
+    });
+    
+    // $(control).on('mu-pricing-change', function () {
+    //     var isMonthly = $(control).hasClass('is-monthly');
+        
+    //     $('[data-mu-pricing="monthly"]').parent().toggle(isMonthly);
+    //     $('[data-mu-pricing="upfront"]').parent().toggle( ! isMonthly);
+    // });
+    
+    $(control).on('mu-pricing-change', function () {
+        var isMonthly = $(control).hasClass('is-monthly');
+        
+        $('[data-mu-pricing="monthly"]').toggle(isMonthly);
+        $('[data-mu-pricing="upfront"]').toggle( ! isMonthly);
+    });
+    $(control).trigger('mu-pricing-change');
+});
+</script>
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement":[{
+		"@type": "ListItem",
+		"position":1,
+		"item": {
+			"@type":"Thing",
+			"@id":"https://etsygeeks.org/",
+			"name": "Home"
+		}
+	},
+	{
+		"@type":"ListItem",
+		"position":2,
+		"item":{
+			"@type":"Thing",
+			"@id":"https://etsygeeks.org/order-now",
+			"name": "Order now"
+		}
+	}]
+}
+</script>
+<!-- SYNC PRICES SCRIPT -->
+<script>
+const settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://account.etsygeeks.org/wp-json/rpg/wc/v1/products/pricing",
+  "method": "GET",
+  "headers": {}
+};
+
+$.ajax(settings).done(function (response) {
+var products = response.data.products;
+//1month
+var num = products['etsy-listing-boosting-1-month-up-to-50k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num));
+$("#1month-50k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-1-month-50k-100k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num));
+$("#1month-100k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-1-month-100k-250k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num));
+$("#1month-250k").html(bdiElem);
+
+
+
+//3 months
+var num = products['etsy-listing-boosting-3-months-up-to-50k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num));
+$("#3month-50k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-3-months-50k-100k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num));
+$("#3month-100k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-3-months-100k-250k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num));
+$("#3month-250k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-3-months-at-once-up-to-50k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num));
+$("#3month-50k-advance").html(bdiElem);
+
+var num = products['etsy-listing-boosting-3-months-at-once-50k-100k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num));
+$("#3month-100k-advance").html(bdiElem);
+
+var num = products['etsy-listing-boosting-3-months-at-once-100k-250k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#3month-250k-advance").html(bdiElem);
+ 
+//6 months
+var num = products['etsy-listing-boosting-6-months-up-to-50k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#6month-50k").html(bdiElem);
+
+$.get("https://account.etsygeeks.org/product/etsy-listing-boosting-6-months-up-to-50k-competitors/?currency=USD", null, function(text) {
+    var price = $(text).find(".woocommerce-Price-amount");
+    var currency = price.find('.woocommerce-Price-currencySymbol');
+    var textprice = price.find('bdi').text();
+    var num = textprice.slice(1);
+    var bdiElem = $('<bdi></bdi>');
+    var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency.text());
+    bdiElem.append(spanElem);
+    bdiElem.append(Number(num));    
+  $("#6month-50k").html(bdiElem);
+});
+
+var num = products['etsy-listing-boosting-6-months-50k-100k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#6month-100k").html(bdiElem);
+
+$.get("https://account.etsygeeks.org/product/etsy-listing-boosting-6-months-50k-100k-competitors/?currency=USD", null, function(text) {
+    var price = $(text).find(".woocommerce-Price-amount");
+    var currency = price.find('.woocommerce-Price-currencySymbol');
+    var textprice = price.find('bdi').text();
+    var num = textprice.slice(1);
+    var bdiElem = $('<bdi></bdi>');
+    var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency.text());
+    bdiElem.append(spanElem);
+    bdiElem.append(Number(num));
+  $("#6month-100k").html(bdiElem);
+});
+
+var num = products['etsy-listing-boosting-6-months-100k-250k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#6month-250k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-6-months-at-once-up-to-50k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#6month-50k-advance").html(bdiElem);
+
+var num = products['etsy-listing-boosting-6-months-at-once-50k-100k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#6month-100k-advance").html(bdiElem);
+
+var num = products['etsy-listing-boosting-6-months-at-once-100k-250k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#6month-250k-advance").html(bdiElem);
+
+//12 months
+var num = products['etsy-listing-boosting-12-months-up-to-50k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#12month-50k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-12-months-50k-100k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#12month-100k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-12-months-100k-250k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#12month-250k").html(bdiElem);
+
+var num = products['etsy-listing-boosting-12-months-at-once-up-to-50k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#12month-50k-advance").html(bdiElem);
+
+var num = products['etsy-listing-boosting-12-months-at-once-50k-100k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#12month-100k-advance").html(bdiElem);
+
+var num = products['etsy-listing-boosting-12-months-at-once-100k-250k-competitors'].pricing.USD;
+var currency = '$';
+var bdiElem = $('<bdi></bdi>');
+var spanElem = $('<span></span>', {class:"woocommerce-Price-currencySymbol"}).text(currency);
+bdiElem.append(spanElem);
+bdiElem.append(Number(num)                                        );
+$("#12month-250k-advance").html(bdiElem);
+
+});
+</script>
